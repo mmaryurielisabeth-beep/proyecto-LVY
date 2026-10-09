@@ -29,9 +29,14 @@
 
         <div class="orbita orbita3"></div>
 
-        <div class="corazon-central">
-            ❤️
-        </div>
+<div class="saturno">
+  <div class="anillo anillo-atras"></div>
+  <div class="planeta"></div>
+  <div class="anillo anillo-delante"></div>
+  <span class="estrella estrella1">✦</span>
+  <span class="estrella estrella2">✧</span>
+  <span class="estrella estrella3">✦</span>
+</div>
 
     </div>
 
@@ -48,10 +53,7 @@
 
         <p id="texto"></p>
 
-        <button onclick="abrirSorpresa()">
-            Abrir sorpresa ❤️
-        </button>
-
+        
     </div>
 
 
@@ -91,7 +93,170 @@
 
     </div>
 
-<audio id="musica" src="musica.mp3"></audio>
+    <!-- BOTÓN PARA COMENZAR LA SORPRESA -->
+<div id="inicioSorpresa" class="inicio-sorpresa">
+  <h2>Una sorpresa para mamá Ana</h2>
+  <p>Preparé un pequeño universo solo para ti...</p>
+
+  <button type="button" id="comenzarSorpresa">
+    ✨ Comenzar sorpresa ✨
+  </button>
+</div>
+
+    <!-- Efectos espaciales decorativos -->
+<div class="efectos-espacio" aria-hidden="true">
+
+  <!-- Estrellas fugaces -->
+  <span class="fugaz fugaz-1"></span>
+  <span class="fugaz fugaz-2"></span>
+  <span class="fugaz fugaz-3"></span>
+
+  <!-- Corazones flotantes -->
+  <span class="corazon-flotante corazon-1">♥</span>
+  <span class="corazon-flotante corazon-2">♥</span>
+  <span class="corazon-flotante corazon-3">♥</span>
+  <span class="corazon-flotante corazon-4">♥</span>
+
+  <!-- Partículas luminosas -->
+  <span class="particula p1"></span>
+  <span class="particula p2"></span>
+  <span class="particula p3"></span>
+  <span class="particula p4"></span>
+  <span class="particula p5"></span>
+  <span class="particula p6"></span>
+  <span class="particula p7"></span>
+  <span class="particula p8"></span>
+  <span class="particula p9"></span>
+  <span class="particula p10"></span>
+
+</div>
+
+<!-- Nubes espaciales flotantes -->
+<div class="nubes-espaciales" aria-hidden="true">
+  <div class="nube nube-1"></div>
+  <div class="nube nube-2"></div>
+  <div class="nube nube-3"></div>
+  <div class="nube nube-4"></div>
+  <div class="nube nube-5"></div>
+</div>
+
+<!-- LUNA BRILLANTE -->
+<div class="luna-neon" aria-hidden="true">
+  <div class="luna-cuerpo"></div>
+  <span class="luna-destello">✦</span>
+  <span class="luna-destello luna-destello-2">✧</span>
+</div>
+
+<!-- REGALO SORPRESA -->
+<div class="regalo-sorpresa">
+  <button
+    type="button"
+    class="boton-regalo"
+    id="botonRegalo"
+    aria-expanded="false"
+    aria-controls="mensajeRegalo"
+  >
+    <span class="caja-regalo" aria-hidden="true">
+      <span class="regalo-lazo"></span>
+      <span class="regalo-tapa"></span>
+      <span class="regalo-caja"></span>
+    </span>
+    <span class="texto-boton-regalo">🎁 Abrir mi sorpresa</span>
+  </button>
+
+  <div class="mensaje-regalo" id="mensajeRegalo" hidden>
+    <button
+      type="button"
+      class="cerrar-regalo"
+      id="cerrarRegalo"
+      aria-label="Cerrar mensaje"
+    >×</button>
+
+    <div class="corazon-regalo">♥</div>
+    <h2>Para mi mamá Ana</h2>
+    <p>
+      Mamá, eres una de las estrellas más bonitas
+      de mi universo. Gracias por tu amor,
+      por cuidarme y por estar conmigo.
+    </p>
+    <p class="frase-regalo">Te quiero muchísimo.</p>
+    <span class="brillos-regalo">✦ ✧ ♥ ✧ ✦</span>
+  </div>
+</div>
+
+<audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+    <script src="script.js"></script>
+
+<button
+  type="button"
+  onclick="document.getElementById('musica').play()"
+  style="position:fixed;top:10px;right:10px;z-index:9999;padding:12px;background:#e83ebd;color:white;border:0;border-radius:10px;"
+>
+  Probar música
+</button>
+
+<!-- CARTAS SECRETAS: UNA POR UNA -->
+<section class="cartas-secretas" id="cartasSecretas" hidden>
+  <h2>💌 Una cartita para mamá</h2>
+  <p class="subtitulo-cartas" id="contadorCartas">
+    Una sorpresa hecha con amor
+  </p>
+
+  <div class="contenedor-cartas">
+    <button class="carta-neon" id="abrirCarta" type="button">
+      <span id="iconoCarta">💗</span>
+      <strong id="nombreCarta">Abre mi corazón</strong>
+      <small>Toca para descubrir</small>
+    </button>
+  </div>
+
+  <div class="mensaje-carta" id="mensajeCarta" hidden>
+    <span class="icono-carta">💖</span>
+    <h3 id="tituloCarta">Para mi mamá</h3>
+    <p id="textoCarta"></p>
+    <button type="button" id="siguienteCarta" class="boton-petalos">
+      Leer siguiente 💌
+    </button>
+  </div>
+</section>
+
+<!-- ESTRELLAS QUE FORMAN ANA -->
+<div class="nombre-estelar" aria-label="Las estrellas forman el nombre Ana">
+  <div class="estrellas-decoracion">✦　✧　·　✧　✦</div>
+  <div class="nombre-ana">A N A</div>
+  <div class="estrellas-decoracion">·　✧　♥　✧　·</div>
+  <p>Mi mamá, mi estrella más bonita</p>
+</div>
+
+<!-- BOTÓN PARA LA LLUVIA DE PÉTALOS -->
+<button type="button" id="botonPetalos" class="boton-petalos">
+  🌸 Lluvia de amor
+</button>
+
+<!-- SORPRESA FINAL -->
+<div id="sorpresaFinal" class="fondo-sorpresa-final" hidden>
+  <div class="contenido-sorpresa-final">
+    <button type="button" id="cerrarSorpresaFinal"
+      class="cerrar-final" aria-label="Cerrar sorpresa">×</button>
+
+    <div class="corazon-final">♥</div>
+    <div class="brillos-final">✦ ✧ ✦ ✧ ✦</div>
+    <h2>Mi universo eres tú, mamá Ana</h2>
+    <p>
+      Entre millones de estrellas, mi mayor suerte es tenerte a ti.
+      No existe regalo que pueda expresar todo el amor que siento por ti.
+    </p>
+    <p class="frase-final">Te quiero hoy, mañana y siempre.</p>
+    <div class="brillos-final">♡ ✦ ♡ ✦ ♡</div>
+  </div>
+</div>
+
+</body>
+
+</html>
 
     <script src="script.js"></script>
 
