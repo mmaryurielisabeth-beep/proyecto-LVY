@@ -1696,3 +1696,69 @@ body.sorpresa-iniciada:not(.cartas-terminadas) #botonPetalos {
     padding: 22px 14px;
   }
 }
+
+/* ARREGLO PARA CELULARES */
+@media screen and (max-width: 600px) {
+
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+overflow-x: hidden;
+}
+
+.inicio-sorpresa,
+.cartas-secretas,
+.nombre-estelar {
+width: 92%;
+max-width: 430px;
+margin: 28px auto;
+padding: 20px 16px;
+text-align: center;
+}
+
+.inicio-sorpresa h2,
+.cartas-secretas h2 {
+font-size: 25px;
+line-height: 1.3;
+overflow-wrap: break-word;
+}
+
+.inicio-sorpresa p,
+.cartas-secretas p {
+font-size: 16px;
+line-height: 1.6;
+}
+
+#comenzarSorpresa,
+.boton-regalo,
+.boton-petalos,
+#abrirCarta,
+#siguienteCarta {
+display: block;
+max-width: 100%;
+margin: 18px auto;
+padding: 13px 18px;
+border-radius: 14px;
+font-size: 16px;
+white-space: normal;
+}
+
+.nombre-ana {
+font-size: clamp(35px, 11vw, 52px);
+text-align: center;
+}
+
+.mensaje-carta,
+.mensaje-regalo,
+.contenido-sorpresa-final {
+width: 92%;
+max-width: 380px;
+margin: 20px auto;
+padding: 22px 16px;
+text-align: center;
+overflow-wrap: break-word;
+}
+}
