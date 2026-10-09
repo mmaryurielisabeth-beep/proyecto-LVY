@@ -465,3 +465,1234 @@ body {
         letter-spacing: 2px;
     }
 }
+
+/* SATURNO AZUL Y ROSADO */
+
+.saturno {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 260px;
+    height: 220px;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    animation: saturno-flota 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 12px rgba(124, 177, 255, .45));
+}
+
+/* SATURNO CON COLORES MÁS BRILLANTES */
+
+.planeta {
+    position: absolute;
+    width: 112px;
+    height: 112px;
+    left: 74px;
+    top: 48px;
+    border-radius: 50%;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0 12px,
+            rgba(255,255,255,.55) 13px 17px,
+            transparent 18px 25px
+        ),
+        linear-gradient(
+            140deg,
+            #ffb8f5,
+            #c46bff 25%,
+            #32d9ff 52%,
+            #4169ff 75%,
+            #ff55c8
+        );
+    box-shadow:
+        inset -15px -8px 24px rgba(45, 0, 150, .35),
+        inset 8px 7px 18px rgba(255,255,255,.8),
+        0 0 18px #48cfff,
+        0 0 35px rgba(139, 75, 255, .8),
+        0 0 50px rgba(255, 75, 210, .4);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.anillo-atras {
+    border: 13px solid transparent;
+    border-top-color: #ff48d7;
+    border-left-color: #a94bff;
+    border-right-color: #32eaff;
+    z-index: 1;
+    filter: drop-shadow(0 0 7px #ff4de1);
+}
+
+.anillo-delante {
+    border: 15px solid transparent;
+    border-bottom-color: #ff54dc;
+    border-left-color: #bd70ff;
+    border-right-color: #48eaff;
+    z-index: 3;
+    filter:
+        drop-shadow(0 0 5px #ff70ed)
+        drop-shadow(0 0 12px #9c52ff);
+}
+
+.estrella {
+    position: absolute;
+    color: #ffffff;
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 12px #39eaff,
+        0 0 22px #ff49d4;
+    animation: estrella-brilla 2s ease-in-out infinite alternate;
+}
+
+.anillo {
+    position: absolute;
+    width: 250px;
+    height: 78px;
+    left: 5px;
+    top: 66px;
+    border-radius: 50%;
+    transform: rotate(-18deg);
+}
+
+.anillo-atras {
+    border: 13px solid transparent;
+    border-top-color: #f5b9ed;
+    border-left-color: #c7a9ff;
+    border-right-color: #9bdfff;
+    z-index: 1;
+}
+
+.anillo-delante {
+    border: 15px solid transparent;
+    border-bottom-color: #ffb6e6;
+    border-left-color: #d9c1ff;
+    border-right-color: #9cdfff;
+    z-index: 3;
+    filter: drop-shadow(0 0 5px #e9b9ff);
+}
+
+.estrella {
+    position: absolute;
+    color: #ffe3fb;
+    text-shadow: 0 0 10px #a8dfff, 0 0 18px #ff9de0;
+    animation: estrella-brilla 2s ease-in-out infinite alternate;
+}
+
+.estrella1 {
+    top: 25px;
+    left: 34px;
+    font-size: 23px;
+}
+
+.estrella2 {
+    top: 145px;
+    right: 5px;
+    font-size: 28px;
+    animation-delay: .7s;
+}
+
+.estrella3 {
+    bottom: 5px;
+    left: 55px;
+    font-size: 17px;
+    animation-delay: 1s;
+}
+
+@keyframes saturno-flota {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -7px;
+    }
+}
+
+@keyframes estrella-brilla {
+    from {
+        opacity: .45;
+        scale: .8;
+    }
+    to {
+        opacity: 1;
+        scale: 1.2;
+    }
+}
+
+@media (max-width: 600px) {
+    .saturno {
+        transform: translate(-50%, -50%) scale(.85);
+    }
+}
+
+/* ===== ESPACIO AZUL Y ROSADO NEÓN ===== */
+
+.efectos-espacio {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 4;
+}
+
+/* ANILLOS DE SATURNO MÁS LUMINOSOS */
+
+.anillo-atras {
+    border-top-color: #ff45df;
+    border-left-color: #b34dff;
+    border-right-color: #36efff;
+    filter:
+        drop-shadow(0 0 5px #ff45df)
+        drop-shadow(0 0 12px #9b4dff);
+}
+
+.anillo-delante {
+    border-bottom-color: #ff57db;
+    border-left-color: #c17aff;
+    border-right-color: #43f2ff;
+    filter:
+        drop-shadow(0 0 5px #ff57db)
+        drop-shadow(0 0 12px #8c4dff);
+}
+
+/* ESTRELLAS FUGACES */
+
+.fugaz {
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    border-radius: 50%;
+    opacity: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #68eaff,
+        #ffffff
+    );
+    box-shadow: 0 0 10px #51dcff;
+    transform: rotate(-35deg);
+    animation: estrella-fugaz 7s linear infinite;
+}
+
+.fugaz-1 {
+    top: 18%;
+    left: 100%;
+    animation-delay: 0s;
+}
+
+.fugaz-2 {
+    top: 43%;
+    left: 100%;
+    animation-delay: 2.5s;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff70e5,
+        #ffffff
+    );
+    box-shadow: 0 0 10px #ff70e5;
+}
+
+.fugaz-3 {
+    top: 68%;
+    left: 100%;
+    animation-delay: 5s;
+}
+
+@keyframes estrella-fugaz {
+    0% {
+        left: 110%;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    18% {
+        left: -20%;
+        opacity: 0;
+    }
+    100% {
+        left: -20%;
+        opacity: 0;
+    }
+}
+
+/* CORAZONES FLOTANTES */
+
+.corazon-flotante {
+    position: absolute;
+    bottom: -50px;
+    font-size: 22px;
+    opacity: 0;
+    color: #ff58d8;
+    text-shadow:
+        0 0 6px #ff58d8,
+        0 0 15px #ff36c7;
+    animation: subir-corazon 10s linear infinite;
+}
+
+.corazon-1 {
+    left: 12%;
+    animation-delay: 0s;
+}
+
+.corazon-2 {
+    left: 35%;
+    color: #56e8ff;
+    text-shadow: 0 0 8px #56e8ff, 0 0 16px #56e8ff;
+    animation-delay: 3s;
+    font-size: 17px;
+}
+
+.corazon-3 {
+    left: 72%;
+    animation-delay: 5s;
+    font-size: 26px;
+}
+
+.corazon-4 {
+    left: 90%;
+    color: #b88aff;
+    text-shadow: 0 0 8px #b88aff, 0 0 16px #b88aff;
+    animation-delay: 7s;
+    font-size: 18px;
+}
+
+@keyframes subir-corazon {
+    0% {
+        transform: translateY(0) rotate(-15deg) scale(.7);
+        opacity: 0;
+    }
+    10% {
+        opacity: .9;
+    }
+    80% {
+        opacity: .8;
+    }
+    100% {
+        transform: translateY(-115vh) rotate(25deg) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* PARTÍCULAS LUMINOSAS */
+
+.particula {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow:
+        0 0 6px #ffffff,
+        0 0 12px #45dfff,
+        0 0 20px #ff62e5;
+    animation: particula-brilla 2s ease-in-out infinite alternate;
+}
+
+.p1  { top: 12%; left: 20%; animation-delay: .2s; }
+.p2  { top: 24%; left: 83%; animation-delay: 1s; }
+.p3  { top: 38%; left: 8%; animation-delay: .6s; }
+.p4  { top: 52%; left: 92%; animation-delay: 1.4s; }
+.p5  { top: 73%; left: 17%; animation-delay: .9s; }
+.p6  { top: 84%; left: 78%; animation-delay: .4s; }
+.p7  { top: 31%; left: 52%; animation-delay: 1.8s; }
+.p8  { top: 63%; left: 44%; animation-delay: .7s; }
+.p9  { top: 8%; left: 66%; animation-delay: 1.2s; }
+.p10 { top: 91%; left: 37%; animation-delay: .3s; }
+
+@keyframes particula-brilla {
+    from {
+        opacity: .2;
+        transform: scale(.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.8);
+    }
+}
+
+/* En teléfonos, conservar los efectos ligeros */
+@media (max-width: 600px) {
+    .fugaz {
+        width: 70px;
+    }
+
+    .corazon-flotante {
+        font-size: 18px;
+    }
+}
+
+/* Respeta la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .fugaz,
+    .corazon-flotante,
+    .particula {
+        animation: none;
+        opacity: .5;
+    }
+}
+
+/* NUBES NEÓN FLOTANTES */
+.nubes-espaciales {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.nube {
+  position: absolute;
+  width: 180px;
+  height: 55px;
+  border-radius: 50px;
+  opacity: 0.45;
+  filter: blur(18px);
+  animation: nubes-flotando 16s ease-in-out infinite alternate;
+}
+
+/* Nube azul */
+.nube-1 {
+  top: 12%;
+  left: -50px;
+  background: #168bff;
+  box-shadow: 0 0 35px #168bff;
+}
+
+/* Nube rosada */
+.nube-2 {
+  top: 35%;
+  right: -60px;
+  background: #ff3fd8;
+  box-shadow: 0 0 40px #ff3fd8;
+  animation-delay: -4s;
+}
+
+/* Nube violeta */
+.nube-3 {
+  bottom: 15%;
+  left: 10%;
+  background: #a64dff;
+  box-shadow: 0 0 40px #a64dff;
+  animation-delay: -7s;
+}
+
+/* Nube azul clara */
+.nube-4 {
+  top: 65%;
+  right: 5%;
+  background: #45d9ff;
+  box-shadow: 0 0 35px #45d9ff;
+  animation-delay: -2s;
+}
+
+/* Nube rosa suave */
+.nube-5 {
+  top: 5%;
+  right: 25%;
+  width: 130px;
+  background: #ff77e9;
+  box-shadow: 0 0 35px #ff77e9;
+  animation-delay: -9s;
+}
+
+@keyframes nubes-flotando {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(45px, 20px) scale(1.15);
+  }
+  100% {
+    transform: translate(-25px, -15px) scale(0.9);
+  }
+}
+
+/* Nubes más pequeñas en teléfonos */
+@media (max-width: 600px) {
+  .nube {
+    width: 120px;
+    height: 40px;
+    filter: blur(15px);
+  }
+}
+
+/* Respeta la preferencia de reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .nube {
+    animation: none;
+  }
+}
+
+/* ===== LUNA NEÓN ===== */
+.luna-neon {
+  position: fixed;
+  top: 15%;
+  left: 7%;
+  width: 95px;
+  height: 95px;
+  z-index: 2;
+  pointer-events: none;
+  animation: luna-flota 5s ease-in-out infinite;
+}
+
+.luna-cuerpo {
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff, #a8e9ff 45%, #f4a4ff);
+  box-shadow:
+    0 0 15px #65dfff,
+    0 0 35px #5c7dff,
+    0 0 55px #ed54ff;
+}
+
+/* Sombra para darle forma de luna creciente */
+.luna-cuerpo::after {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: -8px;
+  left: 22px;
+  border-radius: 50%;
+  background: #080b2a;
+  box-shadow: inset 5px 0 10px #6c42b8;
+}
+
+.luna-destello {
+  position: absolute;
+  top: -15px;
+  right: -12px;
+  color: #ffbaff;
+  font-size: 24px;
+  text-shadow: 0 0 12px #ff50ec;
+  animation: destello-luna 2s ease-in-out infinite alternate;
+}
+
+.luna-destello-2 {
+  top: 65px;
+  left: -15px;
+  color: #7ceaff;
+  animation-delay: 1s;
+}
+
+@keyframes luna-flota {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+@keyframes destello-luna {
+  from {
+    opacity: 0.35;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* ===== BOTÓN DEL REGALO ===== */
+.regalo-sorpresa {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  z-index: 20;
+  text-align: center;
+  font-family: inherit;
+}
+
+.boton-regalo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border: 1px solid #ff8df1;
+  border-radius: 18px;
+  color: white;
+  background: linear-gradient(135deg, #173d91, #922bba, #d62c91);
+  box-shadow:
+    0 0 15px #4ccfff,
+    0 0 30px #d946ef;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  animation: boton-brilla 2.5s ease-in-out infinite;
+}
+
+.boton-regalo:hover {
+  transform: scale(1.05);
+}
+
+.caja-regalo {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 38px;
+}
+
+.regalo-caja {
+  position: absolute;
+  bottom: 0;
+  left: 3px;
+  width: 36px;
+  height: 25px;
+  border: 2px solid #ffb6f4;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f53fbf, #a52dff);
+  box-shadow: 0 0 12px #ff5de4;
+}
+
+.regalo-caja::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 13px;
+  width: 7px;
+  height: 100%;
+  background: #fff0a6;
+}
+
+.regalo-tapa {
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  left: 0;
+  width: 42px;
+  height: 9px;
+  border-radius: 3px;
+  background: #ff8ce9;
+  box-shadow: 0 0 8px #ff5de4;
+}
+
+.regalo-lazo {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 13px;
+  width: 16px;
+  height: 12px;
+  border: 3px solid #fff0a6;
+  border-radius: 50% 50% 0 50%;
+  transform: rotate(-20deg);
+}
+
+@keyframes boton-brilla {
+  0%, 100% {
+    box-shadow: 0 0 12px #4ccfff, 0 0 22px #d946ef;
+  }
+  50% {
+    box-shadow: 0 0 20px #4ccfff, 0 0 38px #ff4bd8;
+  }
+}
+
+/* ===== MENSAJE QUE REVELA EL REGALO ===== */
+.mensaje-regalo {
+  position: fixed;
+  left: 50%;
+  bottom: 85px;
+  transform: translateX(-50%);
+  width: min(340px, calc(100vw - 36px));
+  box-sizing: border-box;
+  padding: 28px 22px 22px;
+  border: 1px solid #ff9af2;
+  border-radius: 22px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(145deg, #101c50, #51216e 60%, #7d245e);
+  box-shadow:
+    0 0 20px #4bcfff,
+    0 0 40px #d946ef;
+  animation: aparece-regalo 0.5s ease-out;
+}
+
+.mensaje-regalo[hidden] {
+  display: none;
+}
+
+.mensaje-regalo h2 {
+  margin: 8px 0 12px;
+  color: #ffb6f4;
+  text-shadow: 0 0 12px #ff4bd8;
+}
+
+.mensaje-regalo p {
+  line-height: 1.6;
+}
+
+.corazon-regalo {
+  color: #ff67d9;
+  font-size: 40px;
+  text-shadow: 0 0 20px #ff38c7;
+  animation: corazon-late 1.2s ease-in-out infinite;
+}
+
+.frase-regalo {
+  color: #8eeaff;
+  font-weight: bold;
+}
+
+.brillos-regalo {
+  color: #ffe7ff;
+  text-shadow: 0 0 12px #ff4bd8;
+  letter-spacing: 7px;
+}
+
+.cerrar-regalo {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@keyframes aparece-regalo {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 18px) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes corazon-late {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* Ajustes para teléfonos */
+@media (max-width: 600px) {
+  .luna-neon {
+    top: 12%;
+    left: 4%;
+    transform: scale(0.75);
+    transform-origin: top left;
+  }
+
+  .regalo-sorpresa {
+    bottom: 12px;
+  }
+
+  .boton-regalo {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .mensaje-regalo {
+    bottom: 78px;
+    max-height: 65vh;
+    overflow-y: auto;
+  }
+}
+
+/* Reducir animaciones si el dispositivo lo solicita */
+@media (prefers-reduced-motion: reduce) {
+  .luna-neon,
+  .luna-destello,
+  .boton-regalo,
+  .corazon-regalo {
+    animation: none;
+  }
+}
+
+/* =====================================
+   CARTAS SECRETAS PARA MAMÁ ANA
+===================================== */
+
+.cartas-secretas {
+  position: relative;
+  z-index: 10;
+  width: min(900px, 92%);
+  margin: 45px auto;
+  padding: 24px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  background: rgba(30, 8, 52, 0.82);
+  border: 1px solid rgba(255, 120, 230, 0.65);
+  border-radius: 24px;
+  box-shadow: 0 0 22px rgba(232, 62, 189, 0.25);
+}
+
+.cartas-secretas h2 {
+  color: #ffb8f2;
+  text-shadow: 0 0 12px #ff35c8;
+}
+
+.subtitulo-cartas {
+  color: #ead7ff;
+}
+
+.contenedor-cartas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.carta-neon {
+  flex: 1 1 160px;
+  max-width: 230px;
+  min-height: 150px;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #ff8de5;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #42115f, #831b7d);
+  box-shadow: 0 0 15px rgba(255, 66, 207, 0.2);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.carta-neon span {
+  font-size: 30px;
+}
+
+.carta-neon small {
+  color: #f7dfff;
+}
+
+.carta-neon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #ff4dce;
+}
+
+.mensaje-carta {
+  position: relative;
+  max-width: 560px;
+  margin: 24px auto 0;
+  padding: 28px 22px;
+  color: white;
+  background: rgba(74, 20, 100, 0.95);
+  border: 1px solid #ffa5ed;
+  border-radius: 20px;
+  box-shadow: 0 0 25px #e83ebd;
+  animation: aparecerCarta 0.4s ease;
+}
+
+.mensaje-carta h3 {
+  color: #ffb8f2;
+}
+
+.mensaje-carta p {
+  line-height: 1.8;
+}
+
+.icono-carta {
+  font-size: 38px;
+}
+
+.cerrar-carta,
+.cerrar-final {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 35px;
+  height: 35px;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+@keyframes aparecerCarta {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =====================================
+   NOMBRE ANA FORMADO POR ESTRELLAS
+===================================== */
+
+.nombre-estelar {
+  position: relative;
+  z-index: 5;
+  width: min(600px, 92%);
+  margin: 35px auto;
+  padding: 22px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #ffd8fa;
+  background: rgba(28, 8, 54, 0.55);
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.nombre-ana {
+  font-size: clamp(55px, 13vw, 100px);
+  font-weight: 900;
+  letter-spacing: 7px;
+  color: #fff1ff;
+  background: linear-gradient(90deg, #ff70dc, #ffffff, #bc8aff, #ff70dc);
+  background-size: 250% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px #f338df);
+  animation: brillarAna 4s linear infinite, flotarAna 3s ease-in-out infinite;
+}
+
+.estrellas-decoracion {
+  color: #ffc5f6;
+  font-size: 23px;
+  letter-spacing: 5px;
+  text-shadow: 0 0 12px #ff47d6;
+  animation: parpadearEstrellas 2s ease-in-out infinite alternate;
+}
+
+.nombre-estelar p {
+  color: #f3d5ff;
+}
+
+@keyframes brillarAna {
+  to {
+    background-position: 250% center;
+  }
+}
+
+@keyframes flotarAna {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes parpadearEstrellas {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+/* =====================================
+   LLUVIA DE PÉTALOS
+===================================== */
+
+.boton-petalos {
+  position: relative;
+  z-index: 12;
+  display: block;
+  margin: 28px auto;
+  padding: 14px 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #ffb5ef;
+  border-radius: 30px;
+  background: linear-gradient(100deg, #9b24c8, #f03da8);
+  box-shadow: 0 0 18px rgba(255, 58, 205, 0.6);
+}
+
+.boton-petalos:hover {
+  box-shadow: 0 0 28px #ff63d7;
+  transform: scale(1.04);
+}
+
+.petalo-volador {
+  position: fixed;
+  z-index: 9998;
+  top: -40px;
+  left: 0;
+  pointer-events: none;
+  user-select: none;
+  font-size: 24px;
+  animation: caerPetalo linear forwards;
+  filter: drop-shadow(0 0 5px #ff5cd7);
+}
+
+@keyframes caerPetalo {
+  0% {
+    transform: translate3d(0, -5vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  100% {
+    transform: translate3d(var(--desplazamiento), 110vh, 0) rotate(650deg);
+    opacity: 0;
+  }
+}
+
+/* =====================================
+   SORPRESA FINAL
+===================================== */
+
+.fondo-sorpresa-final {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  box-sizing: border-box;
+  background: rgba(12, 3, 30, 0.94);
+  backdrop-filter: blur(8px);
+}
+
+.fondo-sorpresa-final[hidden] {
+  display: none;
+}
+
+.contenido-sorpresa-final {
+  position: relative;
+  width: min(600px, 100%);
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 35px 24px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  background: linear-gradient(145deg, #35104f, #78145f, #25104c);
+  border: 1px solid #ffb0ee;
+  border-radius: 28px;
+  box-shadow: 0 0 25px #f52ed1, 0 0 65px rgba(144, 57, 255, 0.45);
+  animation: aparecerCarta 0.7s ease;
+}
+
+.contenido-sorpresa-final h2 {
+  color: #ffc1f3;
+  text-shadow: 0 0 14px #ff42d5;
+}
+
+.contenido-sorpresa-final p {
+  line-height: 1.8;
+}
+
+.corazon-final {
+  font-size: 65px;
+  color: #ff80df;
+  text-shadow: 0 0 12px #ff38c8, 0 0 28px #ff38c8;
+  animation: latirCorazon 1.2s ease-in-out infinite;
+}
+
+@keyframes latirCorazon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.14); }
+}
+
+.brillos-final {
+  margin: 14px 0;
+  color: #ffb6ef;
+  font-size: 25px;
+  letter-spacing: 7px;
+}
+
+.frase-final {
+  color: #ffb6ef;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* En teléfonos, mantener todo cómodo de leer */
+@media (max-width: 480px) {
+  .cartas-secretas {
+    padding: 17px 12px;
+  }
+
+  .carta-neon {
+    flex-basis: 100%;
+    max-width: 100%;
+    min-height: 115px;
+  }
+
+  .contenido-sorpresa-final {
+    padding: 32px 17px;
+  }
+}
+
+/* LAS CARTAS APARECEN SOLO CUANDO LLEGA SU TURNO */
+.cartas-secretas[hidden],
+.mensaje-carta[hidden] {
+  display: none !important;
+}
+
+.cartas-secretas {
+  width: min(460px, 90%);
+  margin: 25px auto;
+  padding: 18px;
+  position: relative;
+  z-index: 20;
+}
+
+.contenedor-cartas {
+  justify-content: center;
+}
+
+.carta-neon {
+  width: 100%;
+  max-width: 300px;
+  min-height: 145px;
+}
+
+.mensaje-carta {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mensaje-carta .boton-petalos {
+  margin: 20px auto 0;
+}
+
+/* BOTÓN DE INICIO DE LA SORPRESA */
+.inicio-sorpresa {
+  position: relative;
+  z-index: 20;
+  width: min(460px, 90%);
+  margin: 25px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+}
+
+.inicio-sorpresa h2 {
+  color: #ffc1f3;
+  text-shadow: 0 0 12px #ff35c8;
+}
+
+.inicio-sorpresa p {
+  color: #f1ddff;
+  line-height: 1.7;
+}
+
+#comenzarSorpresa {
+  padding: 15px 24px;
+  border: 1px solid #ffb5ef;
+  border-radius: 30px;
+  background: linear-gradient(100deg, #9b24c8, #f03da8);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(255, 58, 205, 0.6);
+  animation: brillarBoton 2s ease-in-out infinite alternate;
+}
+
+#comenzarSorpresa:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 28px #ff63d7;
+}
+
+@keyframes brillarBoton {
+  from {
+    box-shadow: 0 0 10px #c53dff;
+  }
+  to {
+    box-shadow: 0 0 25px #ff49d6;
+  }
+}
+
+.inicio-sorpresa[hidden] {
+  display: none !important;
+}
+
+/* ORDENAR LA SORPRESA SIN CAMBIAR EL DISEÑO ORIGINAL */
+
+.cartas-secretas[hidden],
+.inicio-sorpresa[hidden],
+.mensaje-carta[hidden],
+.fondo-sorpresa-final[hidden] {
+  display: none !important;
+}
+
+/* Pantalla inicial más limpia */
+.inicio-sorpresa {
+  width: min(420px, 88%);
+  margin: 35px auto;
+  padding: 24px 18px;
+  text-align: center;
+}
+
+/* Una sola carta, centrada y con espacio */
+.cartas-secretas {
+  width: min(430px, 88%);
+  margin: 35px auto;
+  padding: 22px 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contenedor-cartas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.carta-neon {
+  width: 100%;
+  max-width: 280px;
+  min-height: 135px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* El mensaje no debe ser demasiado ancho */
+.mensaje-carta {
+  width: 100%;
+  max-width: 360px;
+  margin: 20px auto;
+  padding: 24px 18px;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+
+/* Separar las secciones del resto de la página */
+.nombre-estelar {
+  width: min(430px, 88%);
+  margin: 35px auto;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+
+.boton-petalos {
+  max-width: 90%;
+  margin: 28px auto;
+}
+
+/* Ocultar los elementos posteriores al inicio */
+body:not(.sorpresa-iniciada) .cartas-secretas,
+body:not(.sorpresa-iniciada) .nombre-estelar,
+body:not(.sorpresa-iniciada) #botonPetalos {
+  display: none !important;
+}
+
+/* Mientras se leen las cartas, no mostrar otras secciones */
+body.sorpresa-iniciada:not(.cartas-terminadas) .nombre-estelar,
+body.sorpresa-iniciada:not(.cartas-terminadas) #botonPetalos {
+  display: none !important;
+}
+
+/* Evitar que las secciones queden pegadas en teléfonos */
+@media (max-width: 480px) {
+  .cartas-secretas,
+  .inicio-sorpresa {
+    margin: 22px auto;
+    padding: 18px 12px;
+  }
+
+  .mensaje-carta {
+    padding: 22px 14px;
+  }
+}
